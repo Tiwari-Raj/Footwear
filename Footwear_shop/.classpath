@@ -45,5 +45,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/Eclipse_project/javax.mail.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse_project/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse_project/javax.mail-1.6.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

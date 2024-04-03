@@ -239,7 +239,7 @@ label span {
 				<div class="relative">
 					<input type="text" id="card-holder" name="card-holder"
 						class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-						placeholder="   full name" required/>
+						placeholder="   full name"/>
 					<div
 						class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
 						
@@ -251,7 +251,7 @@ label span {
 					<div class="relative w-7/12 flex-shrink-0">
 						<input type="text" id="card-no" name="card-no"
 							class="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-							placeholder="       xxxx-xxxx-xxxx-xxxx" pattern="[4-7][0-9]{15}" required/>
+							placeholder="       xxxx-xxxx-xxxx-xxxx" pattern="[4-7][0-9]{15}" />
 						<div
 							class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
 							
@@ -259,9 +259,9 @@ label span {
 					</div>
 					<input type="text" name="credit-expiry"
 						class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-						placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" required/> <input type="text" name="credit-cvc"
+						placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" /> <input type="text" name="credit-cvc"
 						class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-						placeholder="CVC" pattern="(?!000)\d{3}" required/>
+						placeholder="CVC" pattern="(?!000)\d{3}"/>
 				</div>
 
 

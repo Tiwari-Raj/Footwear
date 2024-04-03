@@ -71,18 +71,19 @@
 				</li>
 			</ul>
 
-
+            <form action="search.jsp" method="post">
 			<div
 				class="lg:flex hidden items-center space-x-2 bg-white py-1 px-2 rounded-full ml-32">
-				<span> <svg xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6 text-gray-600 cursor-pointer" fill="none"
-						viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round"
-							stroke-linejoin="round" stroke-width="2"
-							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-				</span> <input class="outline-none" type="text" placeholder="Search" />
-			</div>
+				
+				
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+    <input class="outline-none ml-2" type="text" name="ch" placeholder="seacrh">
+                 <button class="items-center"></button>
+
+				
+			</div></form>
 
 			<c:if test="${not empty userobj}">
 				<div class="flex justify-end space-x-3 ml-64">

@@ -45,49 +45,49 @@
         </ul>
       </div>
       
-      <div>
-        <p class="font-medium text-white">Services</p>
-
-        <ul class="mt-6 space-y-4 text-sm">
-          <li>
-            <a href="#" class="text-white transition hover:opacity-75"> 1on1 Coaching </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white transition hover:opacity-75"> Company Review </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white transition hover:opacity-75"> Accounts Review </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white transition hover:opacity-75"> HR Consulting </a>
-          </li>
-
-          <li>
-            <a href="#" class="text-white transition hover:opacity-75"> SEO Optimisation </a>
-          </li>
-        </ul>
-      </div>
-
+      
       
 
       <div>
         <p class="font-medium text-white">Helpful Links</p>
 
         <ul class="mt-6 space-y-4 text-sm">
+         
           <li>
-            <a href="#" class="text-white transition hover:opacity-75"> Contact </a>
+            <a href="login.jsp" class="text-white transition hover:opacity-75"> Login </a>
           </li>
 
           <li>
-            <a href="#" class="text-white transition hover:opacity-75"> FAQs </a>
+            <a href="register.jsp" class="text-white transition hover:opacity-75"> Register </a>
+          </li>
+           <li>
+            <a href="#" class="text-white transition hover:opacity-75"> Contact Us </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+       <div class="flex flex-row">
+        <p class=" font-medium text-white text-center" >Helpful Links</p>
+
+        <ul class="flex mt-16 space-x-4 text-sm" style="margin-left:-90px;" >
+         
+          <li>
+            <a href="#" class="text-white transition hover:opacity-75"> <i class="fa-brands fa-facebook text-secondary"></i></a>
           </li>
 
           <li>
-            <a href="#" class="text-white transition hover:opacity-75"> Live Chat </a>
+            <a href="#" class="text-white transition hover:opacity-75"> <i class="fa-brands fa-twitter"></i> </a>
           </li>
+           <li>
+            <a href="#" class="text-white transition hover:opacity-75"> <i class="fa-brands fa-github"></i> </a>
+          </li>
+          <li>
+            <a href="#" class="text-white transition hover:opacity-75"> <i class="fa-brands fa-instagram text-danger"></i> </a>
+          </li>
+          
+          
+          
         </ul>
       </div>
 

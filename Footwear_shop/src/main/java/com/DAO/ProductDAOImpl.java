@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.entity.ProductDtls;
 
 public class ProductDAOImpl implements ProductDAO{
@@ -953,5 +954,39 @@ public class ProductDAOImpl implements ProductDAO{
 		return list;
 	}
 	
+	
+	
+	@Override
+	public List<ProductDtls> getProductBySearch(String ch) {
+		List<ProductDtls> list = new ArrayList<ProductDtls>();
+		ProductDtls b=null;
+		
+		try {
+			String sql = "select * from product_dtls  where brand like ?";
+
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "%"+ch+"%");
+			
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				b = new ProductDtls();
+				b.setProductId(rs.getInt(1));
+				b.setProductname(rs.getString(2));
+				b.setBrand(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setCategory(rs.getString(5));
+				b.setType(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				list.add(b);
+
+			}
+	
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 
 }

@@ -1,7 +1,6 @@
 package com.DAO;
 
 import java.util.List;
-
 import com.entity.ProductDtls;
 import com.entity.User;
 
@@ -64,6 +63,8 @@ public interface ProductDAO {
 	public List<ProductDtls> getkidsslipper();
 	
 	public List<ProductDtls> getkidssandal();
+	
+	public List<ProductDtls> getProductBySearch(String ch);
 	
 	
 	

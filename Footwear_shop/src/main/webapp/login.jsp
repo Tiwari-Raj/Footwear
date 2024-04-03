@@ -64,7 +64,7 @@
                     </svg>
                     <input class="pl-2 outline-none border-none"  type="password" name="password" id="" placeholder="Password" />
                 </div>
-                <span class="text-sm ml-2 hover:text-blue-500 cursor-pointer">Forgot Password ?</span>
+                <a class="text-sm ml-2 hover:text-blue-500 cursor-pointer" href="forgotPassword.jsp">Forgot Password ?</a>
                 <button type="submit" class="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
                 <div class="flex flex-col items-center">
                     <a href="register.jsp"><i>Don't have an account!</i></a>
