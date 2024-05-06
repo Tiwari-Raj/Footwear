@@ -35,13 +35,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-screen h-300 object-cover" src="All_Component/image/SA1.jpg" alt="First slide">
+            <img class="d-block w-screen h-300 object-cover" src="All_Component/image/login2.png" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-screen h-300 object-cover" src="All_Component/image/SA1.jpg" alt="Second slide">
+            <img class="d-block w-screen h-300 object-cover" src="All_Component/image/login4.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-screen h-300 object-cover" src="All_Component/image/SA1.jpg" alt="Third slide">
+            <img class="d-block w-screen h-300 object-cover" src="All_Component/image/login3.png" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -56,7 +56,7 @@
 
 
 	
-<div class="card row" style="width: calc(99% - 6px); height: 300px; margin: 10px; padding: 0 3px; background: linear-gradient(to right, #9cd1e0, #457d9c); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<div class="card row" style="width: calc(99% - 6px); height: 300px; margin: 10px; padding: 0 3px; background: linear-gradient(to right, #6b6a6a, #706e6e); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
 
  <div class="card w-48 relative rounded-lg shadow-xl" style="margin-left: 40px; margin-top: 40px; transition: transform 0.3s;">
     <div class="absolute top-0 left-0 right-0 transform bg-red-500 text-white font-bold py-1 px-2" style="clip-path: polygon(0% 0%, 100% 0%, 75% 50%, 100% 100%, 0% 100%); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); transition: inherit; z-index: 1;">
@@ -129,91 +129,72 @@
  
  
  
-   <div class="container mx-auto mt-10">
+   <div class="container mx-auto mt-4">
     <div class="bg-gray-200 p-4 rounded-lg">
-    
-            <div class="grid grid-cols-5 gap-4">
-            
-            <%
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <% 
             ProductDAOImpl dao = new ProductDAOImpl(DBConnect.getConn());
-			List<ProductDtls> list = dao.getAllShoes();
-			for (ProductDtls b : list) { 
+            List<ProductDtls> list = dao.getAllShoes();
+            for (ProductDtls b : list) { 
             %>
-          
-         <div class="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-lg relative" style="height: fit-content;">
-               <a href="view_product.jsp?pid=<%=b.getProductId()%>" class="text-dark">
-                <img class="w-full" src="product/<%=b.getPhotoName()%>" style="width: 370px; height: 200px;"></a>
-                <c:if test="${not empty userobj}">
-                <a class="absolute top-0 right-0 mt-2 mr-2 text-red-600 bg-white rounded-full p-2" href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=u.getId() %>">
+            <div class="max-w-xs mx-auto bg-white rounded-lg overflow-hidden shadow-lg relative" style="width: 250px; height: fit-content;">
+                <a href="view_product.jsp?pid=<%=b.getProductId()%>" class="text-dark block ml-4">
+                    <img class="w-full" src="product/<%=b.getPhotoName()%>" alt="<%=b.getProductname()%>" style="height: 200px; width:200px;">
+                </a>
+                <% if (session.getAttribute("userobj") != null) { %>
+                <a class="absolute top-0 right-0 mt-2 mr-2 text-red-600 bg-white rounded-full p-2" href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=((User)session.getAttribute("userobj")).getId() %>">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                </c:if>
+                <% } %>
                 <div class="mt-2 ml-3">
                     <p class="font-bold text-xl"><%=b.getBrand() %></p>
-                    <p class="text-gray-700  text-xs"><%=b.getProductname() %></p>
-                     <p class="text-gray-700 font-semibold text-base text-sm mt-2">Rs. <%=b.getPrice()%></p>
-                     
-                     
+                    <p class="text-gray-700 text-xs"><%=b.getProductname() %></p>
+                    <p class="text-gray-700 font-semibold text-base text-sm mt-2">Rs. <%=b.getPrice()%></p>
                 </div>
-                 <c:if test="${not empty userobj}">
+                <% if (session.getAttribute("userobj") != null) { %>
                 <div class="px-6 pt-2 pb-2">
-                    <a href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=u.getId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">Add to Cart</a>
+                    <a href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=((User)session.getAttribute("userobj")).getId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">Add to Cart</a>
                 </div>
-                </c:if>
-                <c:if test="${ empty userobj}">
+                <% } else { %>
                 <div class="px-6 pt-2 pb-2">
-                    <a href="view_product.jsp?pid=<%=b.getProductId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">View </a>
+                    <a href="view_product.jsp?pid=<%=b.getProductId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">View</a>
                 </div>
-                </c:if>
+                <% } %>
             </div>
-            
-            <%
-			}
+            <% } %>
+            <% 
+            List<ProductDtls> list2 = dao.getAllSandal();
+            for (ProductDtls b : list2) { 
             %>
-            
-            
-            
-            <%
-            ProductDAOImpl dao2 = new ProductDAOImpl(DBConnect.getConn());
-			List<ProductDtls> list2 = dao.getAllSandal();
-			for (ProductDtls b : list2) { 
-            %>
-               
-            <div class="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-lg relative" style="height: fit-content;">
-                 <a href="view_product.jsp?pid=<%=b.getProductId()%>" class="text-dark">
-                 <img class="w-full" src="product/<%=b.getPhotoName()%>" style="width: 300px; height: 200px;"></a>
-                <c:if test="${not empty userobj}">
-                <a class="absolute top-0 right-0 mt-2 mr-2 text-red-600 bg-white rounded-full p-2" href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=u.getId() %>">
+            <div class="max-w-xs mx-auto bg-white rounded-lg overflow-hidden shadow-lg relative" style="width: 250px; height: fit-content;">
+                <a href="view_product.jsp?pid=<%=b.getProductId()%>" class="text-dark block ml-4">
+                    <img class="w-full" src="product/<%=b.getPhotoName()%>" alt="<%=b.getProductname()%>" style="height: 200px; width:200px;">
+                </a>
+                <% if (session.getAttribute("userobj") != null) { %>
+                <a class="absolute top-0 right-0 mt-2 mr-2 text-red-600 bg-white rounded-full p-2" href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=((User)session.getAttribute("userobj")).getId() %>">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                </c:if>
+                <% } %>
                 <div class="mt-2 ml-3">
                     <p class="font-bold text-xl"><%=b.getBrand() %></p>
-                    <p class="text-gray-700  text-xs"><%=b.getProductname() %></p>
-                     <p class="text-gray-700 font-semibold text-base text-sm mt-2">Rs. <%=b.getPrice()%></p>
-                     
-                     
+                    <p class="text-gray-700 text-xs"><%=b.getProductname() %></p>
+                    <p class="text-gray-700 font-semibold text-base text-sm mt-2">Rs. <%=b.getPrice()%></p>
                 </div>
-                <c:if test="${not empty userobj}">
+                <% if (session.getAttribute("userobj") != null) { %>
                 <div class="px-6 pt-2 pb-2">
-                    <a href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=u.getId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">Add to Cart</a>
+                    <a href="${pageContext.request.contextPath}/cart?pid=<%=b.getProductId()%>&&uid=<%=((User)session.getAttribute("userobj")).getId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">Add to Cart</a>
                 </div>
-                </c:if>
-                <c:if test="${ empty userobj}">
+                <% } else { %>
                 <div class="px-6 pt-2 pb-2">
-                    <a href="view_product.jsp?pid=<%=b.getProductId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">View </a>
+                    <a href="view_product.jsp?pid=<%=b.getProductId() %>" class="block bg-blue-500 text-white text-center py-1 rounded">View</a>
                 </div>
-                </c:if>
+                <% } %>
             </div>
-            
-            <%
-			}
-            %>
-     
-           
-    </div>
+            <% } %>
+        </div>
     </div>
 </div>
+   
  
 	
 <div class="bottom-0 w-full bg-gray-900 text-white h-30 mt-8">

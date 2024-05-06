@@ -32,14 +32,17 @@
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-5">
 					<!-- White Container -->
-					<div class="container bg-white rounded mt-2 mb-2 px-0">
+					<div class="container bg-white rounded mt-2 mb-2 px-0" style="box-shadow: 0px 0px 10px rgba(0.3, 1, 0.4, 0.5);">
 						<!-- Main Heading -->
+						 <img src="All_Component/image/reset_password.png" style="width:170px; height:120px; margin-left:180px; margin-top:70px;">
 						<div class="row justify-content-center align-items-center pt-3">
+						    
+						     
 							<h1>
 								<strong>Reset Password</strong>
 							</h1>
 						</div>
-						<div class="pt-3 pb-3">
+						<div class="pt-3 pb-3 mt-4">
 							<form class="form-horizontal" action="newPassword" method="POST">
 								<!-- User Name Input -->
 								<div class="form-group row justify-content-center px-3">

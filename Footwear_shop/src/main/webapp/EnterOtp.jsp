@@ -25,12 +25,12 @@
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
-					<div class="panel-body">
+					<div class="panel-body" style="background-color: #adafb8; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
 						<div class="text-center">
 							<h3>
 								<i class="fa fa-lock fa-4x"></i>
 							</h3>
-							<h2 class="text-center">Enter OTP</h2>
+							<h2 class="text-center"><b>Enter OTP</b></h2>
 									<%
 		  			if(request.getAttribute("message")!=null)
 		  			{

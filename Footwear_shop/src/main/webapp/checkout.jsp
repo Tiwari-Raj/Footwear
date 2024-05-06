@@ -40,14 +40,14 @@
 
 label span:first-of-type {
     position: relative;
-    left: 10px;
+    left: -25px;
     font-size: 15px;
     color: #1FBED6;
 }
 
 label span {
     position: relative;
-    top: -33px;
+    top: -10px;
 }
 
 

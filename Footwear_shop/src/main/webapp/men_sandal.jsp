@@ -35,15 +35,16 @@
             </svg>
         </div>
         <div id="categoryDropdown" class="divide-y divide-gray-200 hidden text-center">
-            <a href="men_running.jsp" class="py-2">Running</a>
+            <a href="men_running.jsp" style="text-decoration:none; color:black;" class="py-2 text-black">Running</a>
             <hr class="my-2">
-            <a href="men_sport.jsp" class="py-2">Sports</a>
+            <a href="men_sport.jsp" style="text-decoration:none; color:black;" class="py-2">Sports</a>
             <hr class="my-2">
-            <a href="men_casual.jsp" class="py-2">Casual</a>
+            <a href="men_casual.jsp" style="text-decoration:none; color:black;" class="py-2">Casual</a>
             <hr class="my-2">
-            <a href="men_sandal.jsp" class="py-2">Sandal</a>
+            <a href="men_sandal.jsp" style="text-decoration:none; color:black;" class="py-2">Sandal</a>
             <hr class="my-2">
-            <a href="men_slipper.jsp" class="py-2">Slipper</a>
+            <a href="men_slipper.jsp" style="text-decoration:none; color:black;" class="py-2">Slipper</a>
+            <hr class="my-2">
         </div>
 
        

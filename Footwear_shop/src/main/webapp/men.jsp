@@ -21,7 +21,7 @@
 	%>
 <%@include file="All_Component/navbar.jsp" %>
 
-<img src="All_Component/image/men12.png" style="width:100%; height:250px;">
+<img src="All_Component/image/menlogin2.png" style="width:100%; height:250px;">
 
 <div class="flex">
   
